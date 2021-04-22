@@ -14,6 +14,7 @@
 	padding: 0 1rem;
 	position: relative;
 	z-index: 1;
+	word-wrap: anywhere;
 }
 
 /* Header */
@@ -77,6 +78,7 @@
 }
 
 .todo {
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -92,6 +94,14 @@
 
 .todo .text.completed {
 	text-decoration: line-through;
+}
+.todo i {
+	position: absolute;
+	right: 0;
+	top: 10px;
+}
+.todo span {
+	max-width: 400px;
 }
 
 /* SVG SHAPE BOTTOM */

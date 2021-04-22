@@ -3,35 +3,38 @@ var app = new Vue({
 	data: {
 		todos: [
 			{
-				text: "guardare lezione",
+				text: "Guardare la lezione",
 				completed: false,
 			},
 			{
-				text: "finire lezione",
+				text: "Finire la lezione",
 				completed: false,
 			},
 			{
-				text: "allenarsi",
+				text: "Fare l'esercizio",
 				completed: false,
 			},
 			{
-				text: "guadagnare bitcoin",
+				text: "Allenarsi",
 				completed: false,
 			},
 		],
-		newToDo: " ",
+		newToDo: "",
 	},
 	methods: {
 		addToDo() {
 			// console.log("add new item");
 
-			if (this.newToDo !== " ") {
+			if (this.newToDo !== "") {
 				this.todos.push({
 					text: this.newToDo,
 					completed: false,
 				});
 
+				// Voglio che una volta inserito il nuovo ToDo,
+				// l'input torni vuoto
 				this.newToDo = "";
+
 				this.$refs.todoInput.focus();
 			}
 		},
@@ -43,11 +46,11 @@ var app = new Vue({
 		updateStatus(index) {
 			this.todos[index].completed = !this.todos[index].completed;
 		},
-		focusInput() {
-			this.$refs.todoInput.focus();
-		},
+		// focusInput() {
+		// 	this.$refs.todoInput.focus();
+		// },
 	},
-	mounted() {
-		this.focusInput();
-	},
+	// mounted() {
+	// 	this.focusInput();
+	// },
 });
