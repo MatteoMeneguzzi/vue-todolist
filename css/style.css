@@ -1,0 +1,110 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	font-size: 16px;
+}
+
+/* LAYOUT */
+
+.container {
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 0 1rem;
+	position: relative;
+	z-index: 1;
+}
+
+/* Header */
+
+.app-header {
+	margin: 30px 0px;
+	text-align: center;
+}
+
+.app-header h1 {
+	font-size: 30px;
+}
+
+/* NEW TODO */
+
+.new-todo {
+	display: flex;
+}
+
+.new-todo input,
+.new-todo button {
+	border: 0;
+	outline: none;
+	height: 35px;
+}
+
+.new-todo input {
+	flex-grow: 1;
+	margin-right: 20px;
+	border-bottom: 1px solid #ccc;
+	transition: border 0.3s;
+}
+
+.new-todo input:hover,
+.new-todo input:focus {
+	border-color: #000;
+}
+
+.new-todo button {
+	padding: 0 30px;
+	text-transform: uppercase;
+	cursor: pointer;
+	font-size: 12px;
+	background: rgb(144, 238, 144);
+	border-radius: 10px;
+	transition: background 0.3s;
+}
+
+.new-todo button:hover,
+.new-todo button:focus {
+	background: #ccc;
+}
+
+/* TODO LIST */
+
+.todos-container {
+	margin: 40px 0px;
+	padding: 15px 30px;
+	background: #f2f2f2;
+	box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.2);
+}
+
+.todo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.todo:last-child {
+	border-bottom: 0;
+}
+
+/* COMPLETED */
+
+.todo .text.completed {
+	text-decoration: line-through;
+}
+
+/* SVG SHAPE BOTTOM */
+
+svg.wave {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+}
+
+svg.wave.first {
+	/* bottom: 1%; */
+	transform: rotateY(180deg);
+	transform: translateX(20%);
+	bottom: 1%;
+}
