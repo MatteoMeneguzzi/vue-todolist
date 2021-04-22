@@ -43,5 +43,11 @@ var app = new Vue({
 		updateStatus(index) {
 			this.todos[index].completed = !this.todos[index].completed;
 		},
+		focusInput() {
+			this.$refs.todoInput.focus();
+		},
+	},
+	mounted() {
+		this.focusInput();
 	},
 });
